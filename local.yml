@@ -1,7 +1,9 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install neofetch
-    apt: name=neofetch
-  - name: Install ncdu
-    apt: name=ncdu
+  - name: Install APT packages
+    apt: name={{item}}
+    with_items:
+      - neofetch
+      - ncdu
+      - grepmail
