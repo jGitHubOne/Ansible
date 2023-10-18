@@ -3,3 +3,5 @@
   tasks:
   - name: Install neofetch
     apt: name=neofetch
+  - name: Install ncdu
+    apt: name=ncdu
